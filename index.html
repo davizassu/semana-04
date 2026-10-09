@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de DOM e Eventos</title>
+    <style>
+        /* Estilização moderna com Dark Mode e cantos arredondados */
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .card {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        button {
+            background-color: #bb86fc;
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #a359fc;
+        }
+
+        input {
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #333;
+            background-color: #2c2c2c;
+            color: #fff;
+            margin-right: 8px;
+        }
+
+        .destaque {
+            color: #bb86fc;
+            font-weight: bold;
+        }
+
+        .feito {
+            text-decoration: line-through;
+            color: #777;
+        }
+
+        li {
+            margin: 8px 0;
+            cursor: pointer; /* Muda o mouse para uma "mãozinha" nos itens da lista */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Título que será alterado pelo JS -->
+        <h1 id="titulo">Título Original</h1>
+        
+        <!-- Parágrafos para testar o querySelectorAll -->
+        <p class="texto">Este é o primeiro parágrafo de teste.</p>
+        <p class="texto">Este é o segundo parágrafo de teste.</p>
+    </div>
+
+    <div class="card">
+        <h2>Minha Lista Dinâmica</h2>
+        <!-- Lista que receberá itens via Event Delegation -->
+        <ul id="lista">
+            <li>Item inicial 1 (Clique em mim!)</li>
+            <li>Item inicial 2 (Clique em mim!)</li>
+            <li>Item inicial 3 (Clique em mim!)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Interação e Eventos</h2>
+        <button id="botao">Clique aqui</button>
+        
+        <br><br>
+        <label for="nome">Digite seu nome e olhe o console:</label>
+        <input type="text" id="nome" placeholder="Digite algo...">
+    </div>
+
+    <div class="card">
+        <h2>Adicionar Nova Tarefa</h2>
+        <!-- Formulário para testar o evento de Submit -->
+        <form id="formulario">
+            <input type="text" id="tarefa" placeholder="Nova tarefa...">
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+
+    <!-- O script DEVE vir no final do body para garantir que o HTML carregou antes do JS rodar -->
+    <script src="app.js"></script>
+</body>
+</html>
